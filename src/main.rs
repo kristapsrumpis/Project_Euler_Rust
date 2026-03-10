@@ -13,5 +13,5 @@ fn main() {
 
     // gets and print in console script duration time for euler problem 01
     let duration_01 = start_01.elapsed();
-    println!("Time: {:?}", duration_01);
+    println!("Time: {:?}", duration_01); // print in terminal script run time
 }
