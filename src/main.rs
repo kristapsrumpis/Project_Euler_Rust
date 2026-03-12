@@ -1,6 +1,8 @@
 use std::time::Instant; // import time module for script speed test
 mod _01; // Euler problem 01
 use _01::multiples_sum; //declears wich function use from  mod file
+mod _02;
+use _02::even_fib_sum;
 
 fn main() {
     let start_01 = Instant::now(); // set start point for timer for Euler problem 01
@@ -16,6 +18,12 @@ fn main() {
     println!("Time: {:?}", duration_01); // print in terminal script run time
 
     let start_02 = Instant::now();
+
+    // let sum_of_10 = even_fib_sum(10);
+    // println!("Even Fibonachi sum of 10: {}", sum_of_10);
+
+    let sum_of_4_000_000 = even_fib_sum(4_000_000);
+    println!("Even Fibonachi sum of 4_000_000 {}: ", sum_of_4_000_000);
 
     let duration_02 = start_02.elapsed();
     println!("Time: {:?}", duration_02);
