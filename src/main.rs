@@ -9,6 +9,8 @@ mod _04;
 use _04::largest_palindromic_number;
 mod _05;
 use _05::smallest_multiple;
+mod _06;
+use _06::sum_squere_difference;
 
 fn main() {
     let start_01 = Instant::now(); // set start point for timer for Euler problem 01
@@ -66,4 +68,16 @@ fn main() {
 
     let duration_05 = start_05.elapsed();
     println!("Time: {:?}", duration_05);
+
+    let start_06 = Instant::now();
+
+    let number = 100;
+    println!(
+        "Sum Square Difference of {}: {}",
+        &number,
+        sum_squere_difference(number)
+    );
+
+    let duration_06 = start_06.elapsed();
+    println!("Time: {:?}", duration_06);
 }
