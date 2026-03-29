@@ -1,12 +1,14 @@
 use std::time::Instant; // import time module for script speed test
-mod _01; // Euler problem 01
-use _01::multiples_sum; //declears wich function use from  mod file
+mod _01;
+use _01::multiples_sum;
 mod _02;
 use _02::even_fib_sum;
 mod _03;
 use _03::largest_prime_factor;
 mod _04;
 use _04::largest_palindromic_number;
+mod _05;
+use _05::smallest_multiple;
 
 fn main() {
     let start_01 = Instant::now(); // set start point for timer for Euler problem 01
@@ -54,5 +56,14 @@ fn main() {
     );
 
     let duration_04 = start_04.elapsed();
-    println!("Time: {:?}", duration_04)
+    println!("Time: {:?}", duration_04);
+
+    let start_05 = Instant::now();
+
+    let a = 1;
+    let b = 20;
+    println!("Smallest Multiple: {}", smallest_multiple(a, b));
+
+    let duration_05 = start_05.elapsed();
+    println!("Time: {:?}", duration_05);
 }
