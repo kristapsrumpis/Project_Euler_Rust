@@ -5,6 +5,8 @@ mod _02;
 use _02::even_fib_sum;
 mod _03;
 use _03::largest_prime_factor;
+mod _04;
+use _04::largest_palindromic_number;
 
 fn main() {
     let start_01 = Instant::now(); // set start point for timer for Euler problem 01
@@ -40,5 +42,17 @@ fn main() {
     );
 
     let duration_03 = start_03.elapsed();
-    println!("Time: {:?}", duration_03)
+    println!("Time: {:?}", duration_03);
+
+    let start_04 = Instant::now();
+
+    let min_number = 100;
+    let max_number = 1000;
+    println!(
+        "The largest palindrome made from 3-digit numbers: {}",
+        largest_palindromic_number(min_number, max_number)
+    );
+
+    let duration_04 = start_04.elapsed();
+    println!("Time: {:?}", duration_04)
 }
