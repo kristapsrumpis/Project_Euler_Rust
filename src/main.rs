@@ -83,4 +83,9 @@ fn main() {
 
     let duration_07 = start_07.elapsed();
     println!("Time: {:?}", duration_07);
+
+    let start_08 = Instant::now();
+
+    let duration_08 = start_08.elapsed();
+    println!("Time: {:?}", duration_08)
 }
