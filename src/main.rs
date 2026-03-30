@@ -11,24 +11,19 @@ mod _05;
 use _05::smallest_multiple;
 mod _06;
 use _06::sum_squere_difference;
+mod _07;
+use _07::nth_prime;
 
 fn main() {
     let start_01 = Instant::now(); // set start point for timer for Euler problem 01
 
-    // let sum_of_10 = multiples_sum(10); // run script for test multiple bellow 10
-    // println!("Sum of multibles below 10: {}", sum_of_10);
-
     let sum_of_1000 = multiples_sum(1000); // Run script to get sum of multiples below 1000
     println!("Euler problem 01: {}", sum_of_1000);
 
-    // gets and print in console script duration time for euler problem 01
     let duration_01 = start_01.elapsed();
-    println!("Time: {:?}", duration_01); // print in terminal script run time
+    println!("Time: {:?}", duration_01);
 
     let start_02 = Instant::now();
-
-    // let sum_of_10 = even_fib_sum(10);
-    // println!("Even Fibonachi sum of 10: {}", sum_of_10);
 
     let sum_of_4_000_000 = even_fib_sum(4_000_000);
     println!("Even Fibonachi sum of 4_000_000: {}: ", sum_of_4_000_000);
@@ -80,4 +75,12 @@ fn main() {
 
     let duration_06 = start_06.elapsed();
     println!("Time: {:?}", duration_06);
+
+    let start_07 = Instant::now();
+
+    let n = 10001;
+    println!("{}st prime is: {}", n, nth_prime(n));
+
+    let duration_07 = start_07.elapsed();
+    println!("Time: {:?}", duration_07);
 }
