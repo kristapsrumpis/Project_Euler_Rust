@@ -15,6 +15,8 @@ mod _07;
 use _07::nth_prime;
 mod _08;
 use _08::largest_product_in_a_series;
+mod _09;
+use _09::product;
 
 fn main() {
     let start_01 = Instant::now(); // set start point for timer for Euler problem 01
@@ -96,5 +98,13 @@ fn main() {
     );
 
     let duration_08 = start_08.elapsed();
-    println!("Time: {:?}", duration_08)
+    println!("Time: {:?}", duration_08);
+
+    let start_09 = Instant::now();
+
+    let number = 1000;
+    println!("Product: {}", product(number));
+
+    let duration_09 = start_09.elapsed();
+    println!("Time: {:?}", duration_09);
 }
