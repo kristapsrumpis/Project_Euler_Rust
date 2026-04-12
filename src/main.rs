@@ -1,22 +1,14 @@
+use project_euler_rust::_01::multiples_sum;
+use project_euler_rust::_02::even_fib_sum;
+use project_euler_rust::_03::largest_prime_factor;
+use project_euler_rust::_04::largest_palindromic_number;
+use project_euler_rust::_05::smallest_multiple;
+use project_euler_rust::_06::sum_squere_difference;
+use project_euler_rust::_07::nth_prime;
+use project_euler_rust::_08::largest_product_in_a_series;
+use project_euler_rust::_09::product;
+use project_euler_rust::_10::sum_of_primes;
 use std::time::Instant; // import time module for script speed test
-mod _01;
-use _01::multiples_sum;
-mod _02;
-use _02::even_fib_sum;
-mod _03;
-use _03::largest_prime_factor;
-mod _04;
-use _04::largest_palindromic_number;
-mod _05;
-use _05::smallest_multiple;
-mod _06;
-use _06::sum_squere_difference;
-mod _07;
-use _07::nth_prime;
-mod _08;
-use _08::largest_product_in_a_series;
-mod _09;
-use _09::product;
 
 fn main() {
     let start_01 = Instant::now(); // set start point for timer for Euler problem 01
@@ -107,4 +99,16 @@ fn main() {
 
     let duration_09 = start_09.elapsed();
     println!("Time: {:?}", duration_09);
+
+    let start_10 = Instant::now();
+
+    let limit = 2000000;
+    println!(
+        "Sum of Primes of limit {} is : {}",
+        limit,
+        sum_of_primes(limit)
+    );
+
+    let duration_10 = start_10.elapsed();
+    println!("Time: {:?}", duration_10)
 }
