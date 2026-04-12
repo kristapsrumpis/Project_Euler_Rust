@@ -8,6 +8,7 @@ use project_euler_rust::_07::nth_prime;
 use project_euler_rust::_08::largest_product_in_a_series;
 use project_euler_rust::_09::product;
 use project_euler_rust::_10::sum_of_primes;
+use project_euler_rust::_11::largest_product_in_grid;
 use std::time::Instant; // import time module for script speed test
 
 fn main() {
@@ -110,5 +111,15 @@ fn main() {
     );
 
     let duration_10 = start_10.elapsed();
-    println!("Time: {:?}", duration_10)
+    println!("Time: {:?}", duration_10);
+
+    let start_11 = Instant::now();
+
+    println!(
+        "Largest product in 20x20 grid: {}",
+        largest_product_in_grid()
+    );
+
+    let duration_11 = start_11.elapsed();
+    println!("Time: {:?}", duration_11)
 }
