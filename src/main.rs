@@ -10,6 +10,7 @@ use project_euler_rust::_09::product;
 use project_euler_rust::_10::sum_of_primes;
 use project_euler_rust::_11::largest_product_in_grid;
 use project_euler_rust::_12::find_triangle_number_with_divisors_v2;
+use project_euler_rust::_13::large_sum;
 use std::time::Instant; // import time module for script speed test
 
 fn main() {
@@ -136,4 +137,11 @@ fn main() {
 
     let duration_12 = start_12.elapsed();
     println!("Time: {:?}", duration_12);
+
+    let start_13 = Instant::now();
+
+    println!("Large Summ: {}", large_sum());
+
+    let duration_13 = start_13.elapsed();
+    println!("Time: {:?}", duration_13);
 }
